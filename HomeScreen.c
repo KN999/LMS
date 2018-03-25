@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
+//#include "Register.h"
+//#include "Login.h"
 
 int main()
 {
