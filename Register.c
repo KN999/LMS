@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 
-struct member
+struct Member
 {
 	char UserName[30];
 	char Password[30];
@@ -15,52 +15,52 @@ struct member
 
 int main()
 {
-	struct member m;
+	struct Member M;
 
 	system("clear");
 	printf("\t\t\tRegister\n\n");
 	printf("Enter Following Details:\n");
 	printf("Username : ");
 	//fflush(stdin);
-	fgets(m.UserName, 30, stdin);
+	fgets(M.UserName, 30, stdin);
 	//scanf("%s", &m.UserName);
 	printf("Password : ");
 	//fflush(stdin);
-	fgets(m.Password, 30, stdin);
+	fgets(M.Password, 30, stdin);
 	//scanf("%s", &m.Password);
 	printf("Library Number : ");
 	//fflush(stdin);	
-	fgets(m.LibraryNumber, 10, stdin);
+	fgets(M.LibraryNumber, 10, stdin);
 	//scanf("%s" , &m.LibraryNumber);
 	printf("Name : ");
 	//fflush(stdin);
-	fgets(m.Name, 30, stdin);
+	fgets(M.Name, 30, stdin);
 	//scanf("%s", &m.Name);
 
 	printf("Address: ");
 	//fflush(stdin);
-	fgets(m.Address, 100, stdin);
+	fgets(M.Address, 100, stdin);
 	//scanf("%s", &m.Address);
 	printf("Mobile Number: ");
 	//fflush(stdin);
-	fgets(m.MobileNumber, 11, stdin);
+	fgets(M.MobileNumber, 11, stdin);
 	//scanf("%s", &m.MobileNumber);
 	printf("Email id: ");
 	//fflush(stdin);
-	fgets(m.EmailID, 30, stdin);
+	fgets(M.EmailID, 30, stdin);
 	//scanf("%s", &m.EmailID);
 
 	printf("You have entered the following details:\n\n");
-	printf("Username : %s\n", m.UserName);
-	printf("Password : %s\n", m.Password);
-	printf("Library Number : %s\n", m.LibraryNumber);
-	printf("Name : %s\n", m.Name);
-	printf("Address : %s\n", m.Address);
-	printf("Mobile Number : %s\n", m.MobileNumber);
-	printf("EmailID : %s\n xx", m.EmailID);
+	printf("Username : %s\n", M.UserName);
+	printf("Password : %s\n", M.Password);
+	printf("Library Number : %s\n", M.LibraryNumber);
+	printf("Name : %s\n", M.Name);
+	printf("Address : %s\n", M.Address);
+	printf("Mobile Number : %s\n", M.MobileNumber);
+	printf("EmailID : %s\n xx", M.EmailID);
 
 	FILE * outfile;
-	outfile = fopen("Members.txt", "a");
+	outfile = fopen("Approval.txt", "a");
 
 	if(outfile == NULL)
 	{
@@ -70,7 +70,7 @@ int main()
 	
 	fflush(stdin);
 
-	fwrite(&m, sizeof(struct member), 1, outfile);
+	fwrite(&M, sizeof(struct Member), 1, outfile);
 
 	if(fwrite != 0)
 		printf("Successfully Written\n");
