@@ -17,7 +17,7 @@ int main()
 {
 	struct Member M;
 
-	char choice[2];
+	char choice[5];
 
 	FILE * Read;
 	Read = fopen("Approval.txt", "r");
@@ -27,25 +27,28 @@ int main()
 		
 	while(fread(&M, sizeof(struct Member), 1, Read))
 	{
-		system("clear");
+		//system("clear");
+		//choice = NULL;
 
-		printf("%s\n", M.UserName);
-		printf("%s\n", M.Password);
-		printf("%s\n", M.LibraryNumber);
-		printf("%s\n", M.Name);
-		printf("%s\n", M.Address);
-		printf("%s\n", M.MobileNumber);
-		printf("%s\n", M.EmailID);
-		printf("Do you want to approve this one as Member ?(y/n)\n");
-		fgets(choice, 2, stdin);
+		fflush(stdin);
 
-		if(choice[0] == 'y')
+		printf("UserName : %s", M.UserName);
+		printf("Password : %s", M.Password);
+		printf("Library Number : %s", M.LibraryNumber);
+		printf("Name : %s", M.Name);
+		printf("Address : %s", M.Address);
+		printf("Mobile Number : %s", M.MobileNumber);
+		printf("EmailID : %s", M.EmailID);
+		printf("Do you want to approve this one as Member ?(yes/no)\n");
+		fgets(choice, 5, stdin);		
+
+		if(strcmp(choice, "yes\n")==0)
 		{
 			fwrite(&M, sizeof(struct Member), 1, Write);
-			printf("Added as Member \n");
+			printf("Added as Member \n\n");
 		}	
 		else
-			printf("As your Wish\n");
+			printf("As your Wish\n\n");
 	}
 
 	fclose(Read);
