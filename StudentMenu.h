@@ -9,7 +9,7 @@ int StudentMenu()
 	printf("\t\t\tStudent Menu\n\n");
 	printf("1.CheckoutBook\n");
 	printf("2.CheckinBook\n");
-	printf("3.BookIssued\n");
+	printf("3.Book Details\n");
 	printf("4.ReissueBook\n");
 	//printf("5.Book Details\n");
 
@@ -29,7 +29,7 @@ int StudentMenu()
 			printf("Checkin was Called\n");
 			break;
 		case 3:
-			//BookIssue();
+			//BookDetails();
 			printf("BookIssued called\n");
 			break;
 		case 4:

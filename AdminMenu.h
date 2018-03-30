@@ -1,5 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include"AddBook.h"
+#include"UpdateBook.h"
+#include"RemoveBook.h"
+#include"ApproveMember.h"
+#include"UpdateMember.h"
+#include"RemoveMember.h"
 
 int AdminMenu()
 {
@@ -22,32 +28,32 @@ int AdminMenu()
 	{
 		case 1:
 			printf("Add Book was Called \n");
-			//AddBook();			
+			AddBook();			
 			break;
 		
 		case 2:
 			printf("Update Book was Called\n");
-			//UpdateBook();
+			UpdateBook();
 			break;
 		
 		case 3:
 			printf("Remove Book was Called\n");
-			//RemoveBook();
+			RemoveBook();
 			break;
 
 		case 4:
 			printf("Add Member Called\n");
-			//AddMember();
+			ApproveMember();
 			break;
 
 		case 5:
 			printf("Update Member Called\n");
-			//UpdateMember();
+			UpdateMember();
 			break;
 
 		case 6:
 			printf("Remove Member Called\n");
-			//RemoveBook();
+			RemoveBook();
 			break;
 		
 		default:

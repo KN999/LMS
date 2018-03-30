@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include"AdminMenu.h"
 
 struct Member
 {
@@ -16,12 +17,14 @@ struct Member
 int WhatUpdate();
 //int Search(char *Name);
 
-int main()
+int UpdateMember()
 {
 	char UserName[30];
 	int found = 0;
 
 	system("clear");
+		
+	printf("\t\t\t\t\t\t\t\tUpdate Member\n\n\n\n");
 		
 	printf("Enter the Member Name : ");
 	fgets(UserName, 30, stdin);
@@ -42,10 +45,6 @@ int main()
 			WhatUpdate();
 			fflush(stdin);
 			fwrite(&M, sizeof(struct Member), 1, Write); 
-			if(fwrite != 0)
-				printf("Successfully Written\n");
-			else
-				printf("Error in Writing file\n");
 		}
 		else
 		{
@@ -55,15 +54,29 @@ int main()
 		
 	}
 	if(found == 1)
-		printf("FIle Found and Updated\n");
+		printf("Member Found and Updated\n");
 	else 
-		printf("File Not Found\n");
+		printf("Member Not Found\n");
 
 	fclose(Read);
 	fclose(Write);
 
 	remove("Members.txt");
 	rename("Temp.txt", "Members.txt");
+
+	char more[5];
+
+	printf("Do you want to Update more Member ?(y/n)\n");
+	fgets(more, 5, stdin);
+	
+	if(strcmp(more, "y\n") == 0)
+		UpdateMember();
+	else
+	{
+		system("clear");
+		//printf("thanks for using Update Member\n");
+		AdminMenu();
+	}
 
 	
 		//Update(Name);
@@ -87,6 +100,7 @@ int WhatUpdate()
 	printf("7.EmailID\n");
 	fgets(choice, 3, stdin);
 
+	system("clear");
 
 	switch(choice[0])
 	{

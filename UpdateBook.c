@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include"AdminMenu.h"
 
 struct Book
 {
@@ -13,12 +14,14 @@ struct Book
 
 int WhatUpdate();
 
-int main()
+int UpdateBook()
 {
 	char Name[40];
 	int found = 0;
 
 	system("clear");
+
+	printf("\t\t\t\t\t\t\t\tUpdate Book\n\n\n\n");
 		
 	printf("Enter the Book Name : ");
 	fgets(Name, 40, stdin);
@@ -63,6 +66,20 @@ int main()
 	remove("Books.txt");
 	rename("Temp.txt", "Books.txt");
 
+	char more[5];
+
+	printf("Do you want to Update more Book ?(y/n)\n");
+	fgets(more, 5, stdin);
+	
+	if(strcmp(more, "y\n") == 0)
+		UpdateBook();
+	else
+	{
+		system("clear");
+		//printf("thanks for using Update Book\n");
+		AdminMenu();
+	}
+
 	
 		//Update(Name);
 	return 0;
@@ -81,6 +98,8 @@ int WhatUpdate()
 	printf("3.Copies\n");
 	printf("4.Available\n");
 	fgets(choice, 3, stdin);
+
+	system("clear");
 
 	switch(choice[0])
 	{
@@ -103,7 +122,7 @@ int WhatUpdate()
 		default : 
 			printf("Wrong Choice\n");
 			break;
-	}
+	}	
 
 	return 0;
 }

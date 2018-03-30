@@ -12,12 +12,12 @@ int main()
 
 	if((LibraryNumber[0] == '1') && (LibraryNumber[1] == '1') && (LibraryNumber[2] == '1'))
 		{
-			//printf("Admin Menu was called\n");
+			printf("Admin Menu was called\n");
 			AdminMenu();
 		}
 	else
 		{
-			//printf("Student Menu was called\n");
+			printf("Student Menu was called\n");
 			StudentMenu();
 		}
 	

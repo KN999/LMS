@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
+#include"AdminMenu.h"
 
 struct Book
 {
@@ -11,11 +13,12 @@ struct Book
 	
 };
 
-int main()
+int AddBook()
 {
-	system("clear");
-
 	struct Book B;
+
+	system("clear");
+	printf("\t\t\t\t\t\t\t\tAdd Book\n\n\n\n");
 
 	printf("Book Name : ");
 	fgets(B.Name, 40, stdin);
@@ -47,11 +50,26 @@ int main()
 	fwrite(&B, sizeof(struct Book), 1, infile);
 
 	if(fwrite != 0)
-		printf("Successfully Written\n");
+		printf("\nBook Successfully Added\n\n");
 	else
 		printf("Error in Writing file\n");	
 
 	fclose(infile);
+
+	char more[5];
+
+	printf("Do you want to Add more Book ?(y/n)\n");
+	fgets(more, 5, stdin);
+	
+	if(strcmp(more, "y\n") == 0)
+		AddBook();
+	else
+	{
+		system("clear");
+		//printf("thanks for using Add Book\n");
+		AdminMenu();
+	}
 	
 	return 0;
 }
+
