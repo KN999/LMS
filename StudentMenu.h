@@ -11,6 +11,7 @@ int StudentMenu()
 	printf("2.CheckinBook\n");
 	printf("3.BookIssued\n");
 	printf("4.ReissueBook\n");
+	//printf("5.Book Details\n");
 
 	printf("Enter a Value : ");
 	scanf("%d", &choice);

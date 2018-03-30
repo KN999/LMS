@@ -16,7 +16,7 @@ int WhatUpdate();
 int main()
 {
 	char Name[40];
-	int found;
+	int found = 0;
 
 	system("clear");
 		
@@ -35,6 +35,7 @@ int main()
 	{
 		if(strcmp(Name, B1.Name) == 0)
 		{
+			found = 1;
 			WhatUpdate();
 			fflush(stdin);
 			fwrite(&B1, sizeof(struct Book), 1, Write); 
@@ -50,6 +51,11 @@ int main()
 		}	
 	
 	}	
+
+	if(found == 1)
+		printf("File Found And Updated\n");
+	else
+		printf("File not Found\n");
 
 	fclose(Read);
 	fclose(Write);
