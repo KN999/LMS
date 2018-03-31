@@ -1,15 +1,8 @@
-#include<stdio.h>
+/*#include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include"AdminMenu.h"
-
-struct Book
-{
-	char Name[40];
-	char Author[40];
-	char Copies[5];
-	char Available[5];
-};
+//#include"AdminMenu.h"*/
+#include"LibraryHeader.h"
 
 int RemoveBook()
 {
@@ -62,8 +55,8 @@ int RemoveBook()
 	else
 	{
 		system("clear");
-		//printf("thanks for using Remove Book\n");
-		AdminMenu();
+		printf("thanks for using Remove Book\n");
+		//AdminMenu();
 	}
 	
 	return 0;	

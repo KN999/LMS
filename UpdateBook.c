@@ -1,16 +1,10 @@
-#include<stdio.h>
+/*#include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include"AdminMenu.h"
+//#include"AdminMenu.h"*/
+#include"LibraryHeader.h"
 
-struct Book
-{
-	char Name[40];
-	char Author[40];
-	char Copies[5]; 
-	char Available[5];
-} B1;
-
+struct Book B1;
 
 int WhatUpdate();
 
@@ -76,8 +70,8 @@ int UpdateBook()
 	else
 	{
 		system("clear");
-		//printf("thanks for using Update Book\n");
-		AdminMenu();
+		printf("thanks for using Update Book\n");
+		//AdminMenu();
 	}
 
 	

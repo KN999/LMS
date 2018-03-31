@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include"AdminMenu.h"
+#include"LibraryHeader.h"
 
 struct Book
 {
@@ -67,7 +67,7 @@ int AddBook()
 	{
 		system("clear");
 		//printf("thanks for using Add Book\n");
-		AdminMenu();
+		//AdminMenu();
 	}
 	
 	return 0;

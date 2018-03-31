@@ -1,18 +1,9 @@
-#include<stdio.h>
+/*#include<stdio.h>
 #include<stdlib.h>
-#include<string.h>
-#include"AdminMenu.h"
+#include<string.h>*/
+#include"LibraryHeader.h"
 
-struct Member
-{
-	char UserName[30];
-	char Password[30];
-	char LibraryNumber[10];
-	char Name[30];
-	char Address[100];
-	char MobileNumber[11];
-	char EmailID[30];
-} M;
+struct Member M;
 
 int WhatUpdate();
 //int Search(char *Name);
@@ -74,8 +65,8 @@ int UpdateMember()
 	else
 	{
 		system("clear");
-		//printf("thanks for using Update Member\n");
-		AdminMenu();
+		printf("thanks for using Update Member\n");
+		//AdminMenu();
 	}
 
 	

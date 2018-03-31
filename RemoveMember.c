@@ -1,18 +1,8 @@
-#include<stdio.h>
+/*#include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include"AdminMenu.h"
-
-struct Member
-{
-	char UserName[30];
-	char Password[30];
-	char LibraryNumber[10];
-	char Name[30];
-	char Address[100];
-	char MobileNumber[11];
-	char EmailID[30];
-};
+//#include"AdminMenu.h"*/
+#include"LibraryHeader.h"
 
 
 int RemoveMember()
@@ -70,8 +60,8 @@ int RemoveMember()
 	else
 	{
 		system("clear");
-		//printf("thanks for using Remove Member\n");
-		AdminMenu();
+		printf("thanks for using Remove Member\n");
+		//AdminMenu();
 	}	
 
 	return 0;
